@@ -14,3 +14,6 @@ $ npm install
 ```
 
 $ Bạn có thể khởi động ứng dụng bằng cách sử dụng node `.` trong thiết bị đầu cuối của bạn. Nếu bạn truy cập vào `http: // localhost: 5000` trên trình duyệt của mình, bạn sẽ thấy ứng dụng hoạt động.
+
+
+# Hết

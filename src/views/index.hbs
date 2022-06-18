@@ -26,8 +26,10 @@
       </h6>
       <p><a href="https://github.com/VnMinhDz">Lepucius</a> - Đã Đăng Kí Bản Quyền @2022</p>
       <form method="POST" action="/upload" enctype="multipart/form-data">
+      <!--Enctype= multipart/form-data chính là một loại mã hóa cho phép tất cả các tệp có thể gửi được qua POST.
+       Nếu như không có loại mã hoá này thì các tệp sẽ không thể thực hiện gửi được qua POST-->
         <input type="file" name="image" accept="image/*" />
-
+<!--image/*nên bắt tất cả các hình ảnh. -->
         <button class="button-primary">Tải Lên</button>
       </form>
     </div>

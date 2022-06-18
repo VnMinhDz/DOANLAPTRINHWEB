@@ -7,18 +7,18 @@
 * http://www.opensource.org/licenses/mit-license.php
 * 12/29/2014
 */
-/* Base Styles
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* NOTE
-html is set to 62.5% so that all the REM measurements throughout Skeleton
-are based on 10px sizing. So basically 1.5rem = 15px :) */
+/* Kiểu cơ sở
+–––––––––––––––––––––––––––––––––––––––––––––––– */
+/* GHI CHÚ
+html được đặt thành 62,5% để tất cả các phép đo REM trên Skeleton
+dựa trên kích thước 10px. Vì vậy, về cơ bản 1.5rem = 15px :) */
 html {
   font-size: 62.5%;
 }
 
 body {
   font-size: 1.5em;
-  /* currently ems cause chrome bug misinterpreting rems on body element */
+  /* hiện tại ems gây ra lỗi chrome hiểu sai các rems trên phần tử body */
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -27,7 +27,7 @@ body {
  
 }
 
-/* Typography
+/* Kiểu chữ
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -71,7 +71,7 @@ h6 {
   letter-spacing: 0;
 }
 
-/* Larger than phablet */
+/* Lớn hơn phablet*/
 @media (min-width: 550px) {
   h1 {
     font-size: 5.0rem;
@@ -178,7 +178,7 @@ input[type="button"].button-primary:focus {
 input[type="file"] {
   height: 36px;
   padding: 6px 10px;
-  /* The 6px vertically centers text on FF, ignored by Webkit */
+  /* Văn bản 6px căn giữa theo chiều dọc trên FF, bị Webkit bỏ qua */
   background-color: #fff;
   border: 1px solid #D1D1D1;
   border-radius: 4px;
@@ -186,7 +186,7 @@ input[type="file"] {
   box-sizing: border-box;
 }
 
-/* Removes awkward default styles on some inputs for iOS */
+/* Loại bỏ các kiểu mặc định khó xử trên một số đầu vào cho iOS */
 input[type="file"] {
   -webkit-appearance: none;
   -moz-appearance: none;

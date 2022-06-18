@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="css/main.css">
-    <title>Kết quả</title>
-  </head>
-  <body>
-    <div class="section">
-      <div class="container">
-          <h1 class="section-heading">Kết quả</h1>
-          <p><a href="https://github.com/VnMinhDz">@Lepucius</a>-Đã Đăng Kí Bản Quyền @2022</p>
-          <p>{{text}}</p>
-          <!--Handlebars.js-->
-        </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/main.css">
+  <title>Kết quả</title>
+</head>
+
+<body>
+  <div class="section">
+    <div class="container">
+
+      <h1 class="section-heading">Result</h1>
+      <div>
+        <p><a href="https://github.com/VnMinhDz">@Lepucius</a>-Đã Đăng Kí Bản Quyền @2022</p>
+        <p>{{text}}</p>
+        <!--Handlebars.js-->
+        <button type="button" onclick="quay_lai_trang_truoc()">Quay lại trang trước</button>
+
+        <script>
+          function quay_lai_trang_truoc() {
+            history.back();
+          }
+        </script>
       </div>
+
+
     </div>
-  </body>
+  </div>
+  </div>
+</body>
+
 </html>

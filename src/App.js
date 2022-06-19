@@ -1,4 +1,5 @@
 // mô đun 
+const { text } = require('express')
 const express = require('express')
 const App = express()
 
@@ -43,15 +44,29 @@ App.post('/upload', (req, res) => {
 
   // Nhận dạng bộ đệm hình ảnh
 
-// Kiểm tra tất cả các mã ngôn ngữ (được sử dụng trên thông số thứ hai của nhận dạng) của Tesseract trong:
-// https://tesseract-ocr.github.io/tessdoc/Data-Files#data-files-for-version-400-november-29-2016
+  // Kiểm tra tất cả các mã ngôn ngữ (được sử dụng trên thông số thứ hai của nhận dạng) của Tesseract trong:
+  // https://tesseract-ocr.github.io/tessdoc/Data-Files#data-files-for-version-400-november-29-2016
   recognize(image.data, 'por', { logger: d => console.log(`[${d.status}] ${Math.floor(d.progress * 100)}%`) })
-    .then(({ data: { text } }) => res.render('result', { text }))
-})
+    .then(({ data: { text } }) => res.render('result', { text }));
+
+});
+const puppeteer = require('puppeteer');
+
+(async () => {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto('http://localhost:5000/upload', {
+    waitUntil: 'networkidle2',
+  });
+  await page.pdf({ path: 'web.pdf', format: 'a4' });
+
+  await browser.close();
+})();
 //Hàm Math.floor()trả về số nguyên lớn nhất nhỏ hơn hoặc bằng một số nhất định
 //Logger Nodejs là một cụm từ trong lập trình có nghĩa là ghi lại bất cứ những thao tác của người dùng
 //Hàm then sẽ dùng 2 tham số với ý nghĩa: một callback thành công và một callback thất bại 
 // Kiểm tra hình ảnh có dữ liệu bằng thao tác ghi nhật kí hiện ra cửa sổ  tính giá trị in tiến trình đọc 
 // nếu đọc được thì gọi res và render trang kết quả dưới dạng text 
+
 
 App.listen(5000, console.log('Ứng dụng chạy trên cổng 5000'))
